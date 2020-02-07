@@ -1,4 +1,4 @@
-USENIX Enigma2020
+USENIX Enigma 2020
 =================
 
 ### [Encrypted Messaging](https://www.usenix.org/conference/enigma2020/presentation/encrypted-messaging) Panel
@@ -148,6 +148,6 @@ logical parameters like virtualized MAC addrs or registry keys unique to virtual
 - A measurement is no longer a good measurement when it becomes a target. A signal cannot be used for measure and enforcement, or you don't know which affect you're monitoring.
 
 ### Errata
-[Site Isolation in Chrome Browser](https://www.usenix.org/conference/usenixsecurity19/presentation/reis)
-[DP in Tensorflow](https://www.cleverhans.io/privacy/2019/03/26/machine-learning-with-differential-privacy-in-tensorflow.html)
+- [Site Isolation in Chrome Browser](https://www.usenix.org/conference/usenixsecurity19/presentation/reis)
+- [DP in Tensorflow](https://www.cleverhans.io/privacy/2019/03/26/machine-learning-with-differential-privacy-in-tensorflow.html)
 
