@@ -92,14 +92,14 @@ logical parameters like virtualized MAC addrs or registry keys unique to virtual
 
 #### [The Browser Privacy Arms Race: Which Browsers Actually Protect Your Privacy?](https://www.usenix.org/conference/enigma2020/presentation/arrieta)
 - If you are concerned with privacy, maybe don't make a browser?
-... Safari/Webkit - implemented ITP to restrict third party cookies to sites with validated user interaction. However, reading ITP states can be used for tracking all by itself.
-... Brave/Firefox - lots of privacy  features added
-... Tor browser
-... Chrome - no DNT
-... Edge - added DNT, possible extension compatibility
+..- Safari/Webkit - implemented ITP to restrict third party cookies to sites with validated user interaction. However, reading ITP states can be used for tracking all by itself.
+..- Brave/Firefox - lots of privacy  features added
+..- Tor browser
+..- Chrome - no DNT
+..- Edge - added DNT, possible extension compatibility
 - Implement yellow lists to treat some sites with more behavior constraints
 - The Internet should be opt-in
-- Panopticlick… some privacy features can make users more fingerprintable
+- Panopticlick... some privacy features can make users more fingerprintable
 
 ### Vulnerable Populations
 #### [Public Records in the Digital Age: Can They Save Lives?](https://www.usenix.org/conference/enigma2020/presentation/kosmides)
