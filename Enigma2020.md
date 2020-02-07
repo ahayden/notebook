@@ -13,7 +13,7 @@
 #### [Securing the Software Supply Chain](https://www.usenix.org/conference/enigma2020/presentation/valsorda)
 
 - Provenance (universal name and permanent version), Availability (making sure versions can be incorporated when needed, Go uses a proxy service that can be defined at build time and uses cached copies of all modules), Integrity (no trust in proxies, central entities, first use, or developer key management).
-- Go uses a checksum database- the go client uses a Merkle tree for accountability of an append only database of checksums for all modules. The database is served as tiles that can be cached locally.
+- Go uses a checksum database- the go client uses a tree of hashes for accountability of an append only database of checksums for all modules. The database is served as tiles that can be cached locally.
 - Go prefers to copy rather than trust dependency sources
 See: https://research.swtch.com/deps
 
@@ -47,7 +47,7 @@ logical parameters like virtualized MAC addrs or registry keys unique to virtual
 
 #### [Pre-Authentication Messages as a Common Root Cause of Cell Network Attacks](https://www.usenix.org/conference/enigma2020/presentation/nasser)
 - IMSI-catcher is a cell base station spoofer. A mobile devices does not authenticate the base station and will report its IMSI when requested. Most likely attacks are location tracking, denial of service, and communications interception or injecting comms. Malicious IMSI-catchers are deployed in DC, and are likely in other US cities, but handling them has not been prioritized by the FCC/FBI.
-- [Insecure connection bootstrapping in cellular networks: the root of all evil](https://dl.acm.org/doi/10.1145/3317549.3323402
+- [Insecure connection bootstrapping in cellular networks: the root of all evil](https://dl.acm.org/doi/10.1145/3317549.3323402)
 
 ### Emerging Topics
 #### [Virtual Reality Brings Real Risks: Are We Ready?](https://www.usenix.org/conference/enigma2020/presentation/pearlman)
