@@ -1,5 +1,3 @@
-Notebook
-========
+# Notebook
 
-[Enigma 2020](Enigma2020.md)
-----------------------------
+## [USENIX Enigma 2020](Enigma2020.md)

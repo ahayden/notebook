@@ -1,5 +1,4 @@
-USENIX Enigma 2020
-=================
+# USENIX Enigma 2020
 
 ### [Encrypted Messaging](https://www.usenix.org/conference/enigma2020/presentation/encrypted-messaging) Panel
 
@@ -34,22 +33,21 @@ See: https://research.swtch.com/deps
 logical parameters like virtualized MAC addrs or registry keys unique to virtual machines, kernel drivers, or time-based detections like long system times, or userspace items like installed applications, user interaction, or network characteristics like domain connections to other hosts. In other words, use multiple profiles for malware analysis and avoid generic ones.
 
 #### [BeyondProd: The Origin of Cloud-Native Security at Google](https://www.usenix.org/conference/enigma2020/presentation/baker)
-- Google delineates which configurations are available to developers and which are the role of infrastructure… all workloads are run as containers. Google enforces the cloud native model on its developers, while running the infrastructure separately. Google's builds infra signs the results from making a container, which is validated when deployed.
-- https://cloud.google.com/security/beyondprod/
-- https://cloud.google.com/security/encryption-in-transit/application-layer-transport-security/
-- https://cloud.google.com/security/binary-authorization-for-borg
-- https://cloud.google.com/security/encryption-in-transit/application-layer-transport-security/
-- https://services.google.com/fh/files/misc/anthos_an_opportunity_to_modernize_application_security_white_paper.pdf
+- Google delineates which configurations are available to developers and which are the role of infrastructure… all workloads are run as containers. Google enforces the cloud native model on its developers, while running the infrastructure separately. Google's build infra signs the results from making a container, which is validated when deployed.
+- [Beyond Prod](https://cloud.google.com/security/beyondprod/)
+- [ALTS](https://cloud.google.com/security/encryption-in-transit/application-layer-transport-security/)
+- [BORG](https://cloud.google.com/security/binary-authorization-for-borg)
+- [Application Security](https://services.google.com/fh/files/misc/anthos_an_opportunity_to_modernize_application_security_white_paper.pdf)
 
 #### [Bringing Usable Crypto to 7 Million Developers](https://www.usenix.org/conference/enigma2020/presentation/white)
 - Confusion in the industry about what level database encryption works… at disk or network level, or within table space? The problem: processes on host machines can always see keys in the clear. "Pinky Promise as a Service". End-to-end, client-side encryption inserts encrypted data into the database from the application or client. Encrypted fields in the database render fields unsearchable. 
-- MongoDB client-side field-level encryption. https://docs.mongodb.com/manual/core/security-client-side-encryption/
+- [MongoDB client-side field-level encryption](https://docs.mongodb.com/manual/core/security-client-side-encryption/)
 - Keys are scoped per-field or per-document, and can therefore be unique to a user. Distributed systems store encrypted keys across the network. The application server with a session has access to the keys used to encrypt the database fields. 
-- Searchable symmetric encryption http://esl.cs.brown.edu/blog/how-to-search-on-encrypted-data-searchable-symmetric-encryption-part-5/
+- [Searchable symmetric encryption](http://esl.cs.brown.edu/blog/how-to-search-on-encrypted-data-searchable-symmetric-encryption-part-5/)
 
 #### [Pre-Authentication Messages as a Common Root Cause of Cell Network Attacks](https://www.usenix.org/conference/enigma2020/presentation/nasser)
 - IMSI-catcher is a cell base station spoofer. A mobile devices does not authenticate the base station and will report its IMSI when requested. Most likely attacks are location tracking, denial of service, and communications interception or injecting comms. Malicious IMSI-catchers are deployed in DC, and are likely in other US cities, but handling them has not been prioritized by the FCC/FBI.
-- https://dl.acm.org/doi/10.1145/3317549.3323402
+- [Insecure connection bootstrapping in cellular networks: the root of all evil](https://dl.acm.org/doi/10.1145/3317549.3323402
 
 ### Emerging Topics
 #### [Virtual Reality Brings Real Risks: Are We Ready?](https://www.usenix.org/conference/enigma2020/presentation/pearlman)
@@ -58,8 +56,7 @@ logical parameters like virtualized MAC addrs or registry keys unique to virtual
 - DP requires that an observer cannot determine if a single sample is within a training set. 
 - A model can be trained to fit a training set that includes extremes, but still correctly identifies them. These extremes are at risk to be identified, so parameters must be tuned to make the model less fit to the training set, but also preserve privacy.
 - Governance applies to models in the case that a training subject must be removed from a training set. This is machine unlearning. Privacy techniques operate on the extremes of the data set whereas overfitting corrections operate in the general case, so DP corrects for overfitting while correcting for overfitting does not preserve privacy.
-- https://arxiv.org/abs/1910.13427
-- https://cleverhans.io
+- [Distribution Density, Tails, and Outliers in Machine Learning: Metrics and Applications](https://arxiv.org/abs/1910.13427)
 - [Extracting models](https://www.usenix.org/conference/usenixsecurity20/presentation/chandrasekaran)
 
 #### [How to Build Realistic Machine Learning Systems for Security?](https://www.usenix.org/conference/enigma2020/presentation/afroz)
@@ -94,13 +91,13 @@ logical parameters like virtualized MAC addrs or registry keys unique to virtual
 - GDPR requires reasonable and appropriate measures. The measures/controls should be implemented in the SDLC, which can be difficult with Agile processes. Uber tags data with its classification and identifies anomalies when it moves to different places. Uber embeds privacy liaisons in engineering teams to help make decisions. Uber requires privacy reviews during feature development. The Uber SDLC will release versions that are noncompliant (except for some must-haves) and fix them after.
 
 #### [The Browser Privacy Arms Race: Which Browsers Actually Protect Your Privacy?](https://www.usenix.org/conference/enigma2020/presentation/arrieta)
-- Safari/Webkit - implemented ITP to restrict third party cookies to sites with validated user interaction.
-- Brave/Firefox - lots of privacy  features added
-- Tor browser
-- Chrome - no DNT
-- Edge - added DNT, possible extension compatibility
+- If you are concerned with privacy, maybe don't make a browser?
+...Safari/Webkit - implemented ITP to restrict third party cookies to sites with validated user interaction. However, reading ITP states can be used for tracking all by itself.
+...Brave/Firefox - lots of privacy  features added
+...Tor browser
+...Chrome - no DNT
+...Edge - added DNT, possible extension compatibility
 - Implement yellow lists to treat some sites with more behavior constraints
-- If you can't implement privacy, maybe don't make a browser?
 - The Internet should be opt-in
 - Panopticlick… some privacy features can make users more fingerprintable
 
@@ -113,8 +110,8 @@ logical parameters like virtualized MAC addrs or registry keys unique to virtual
 
 #### [Next-Generation SecureDrop: Protecting Journalists from Malware](https://www.usenix.org/conference/enigma2020/presentation/helsby)
 - Current implementation hosts front and backend interfaces at the site of journalists. (see diagram)… Over two years they've encountered issues with cumbersome user around the airgap. Redesigned with Fedora/Qubes virtual stack. 
-- Project inspired by: https://en.wikipedia.org/wiki/Jeffrey_Alexander_Sterling
-- New version git repo: https://github.com/freedomofpress/securedrop/releases/tag/1.2.0
+- Project inspired by [Sterling](https://en.wikipedia.org/wiki/Jeffrey_Alexander_Sterling)
+- [New version git repo](https://github.com/freedomofpress/securedrop/releases/tag/1.2.0)
 
 ### [Disinformation](https://www.usenix.org/conference/enigma2020/presentation/disinformation) Panel
 - DiResta was one of the authors of the Senate report on Russian propaganda in 2016. Propaganda has black/white/grey varieties. Echo chambers are now "bespoke realities". *all* political actors engage in disinformation because not doing so is considered ceding ground to opponents. Information Security has its own problematic relationship with social media/disinformation. Disinformation as a service is becoming an industry.
