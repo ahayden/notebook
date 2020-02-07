@@ -24,7 +24,7 @@ See: https://research.swtch.com/deps
 
 #### [Stack Overflow: A Story of Two Security Tales](https://www.usenix.org/conference/enigma2020/presentation/fischer)
 
-- Security expert found answer to an Android app security feature on SO…. With a remote RCE that had been integrated into apps with 200M users… Research team tracked QA site solutions to published apps. They found that insecure suggestions are prevalent on SO 30% of the time… and have been incorporated into 15% of Google Play published apps. (Secure solutions, 70%, are incorporated into 6% of apps). 
+- Security expert found answer to an Android app security feature on SO…. With RCE that had been integrated into apps with 200M users… Research team tracked QA site solutions to published apps. They found that insecure suggestions are prevalent on SO 30% of the time… and have been incorporated into 15% of Google Play published apps. (Secure solutions, 70%, are incorporated into 6% of apps). 
 - Fisher believes people use the insecure options because they make the need work in the most general cases and get promoted by more users. He integrated a nudge system in a controlled study on the cryptographic API subsections of SO that warned users about vulnerabilities identified in example code and directed them to more specific solutions instead. In controlled testing, 60% of non-nudged participants implemented a solution securely whereas 77% of nudged developers implemented a secure solution. SO believes the community should fix vulnerable answers themselves.
 
 ### Fundamentals and Infrastructure
