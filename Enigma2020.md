@@ -53,7 +53,7 @@ logical parameters like virtualized MAC addrs or registry keys unique to virtual
 #### [Virtual Reality Brings Real Risks: Are We Ready?](https://www.usenix.org/conference/enigma2020/presentation/pearlman)
 
 #### [What Does It Mean for Machine Learning to Be Trustworthy?](https://www.usenix.org/conference/enigma2020/presentation/papernot)
-- DP requires that an observer cannot determine if a single sample is within a training set. 
+- Differential Privacy requires that an observer cannot determine if a single sample is within a training set. 
 - A model can be trained to fit a training set that includes extremes, but still correctly identifies them. These extremes are at risk to be identified, so parameters must be tuned to make the model less fit to the training set, but also preserve privacy.
 - Governance applies to models in the case that a training subject must be removed from a training set. This is machine unlearning. Privacy techniques operate on the extremes of the data set whereas overfitting corrections operate in the general case, so DP corrects for overfitting while correcting for overfitting does not preserve privacy.
 - [Distribution Density, Tails, and Outliers in Machine Learning: Metrics and Applications](https://arxiv.org/abs/1910.13427)
@@ -92,11 +92,11 @@ logical parameters like virtualized MAC addrs or registry keys unique to virtual
 
 #### [The Browser Privacy Arms Race: Which Browsers Actually Protect Your Privacy?](https://www.usenix.org/conference/enigma2020/presentation/arrieta)
 - If you are concerned with privacy, maybe don't make a browser?
-...Safari/Webkit - implemented ITP to restrict third party cookies to sites with validated user interaction. However, reading ITP states can be used for tracking all by itself.
-...Brave/Firefox - lots of privacy  features added
-...Tor browser
-...Chrome - no DNT
-...Edge - added DNT, possible extension compatibility
+... Safari/Webkit - implemented ITP to restrict third party cookies to sites with validated user interaction. However, reading ITP states can be used for tracking all by itself.
+... Brave/Firefox - lots of privacy  features added
+... Tor browser
+... Chrome - no DNT
+... Edge - added DNT, possible extension compatibility
 - Implement yellow lists to treat some sites with more behavior constraints
 - The Internet should be opt-in
 - Panopticlick… some privacy features can make users more fingerprintable
