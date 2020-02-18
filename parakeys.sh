@@ -38,6 +38,7 @@ EOF
   echo "URL=http://localhost:8787/" >>rstudio.url
   echo "#!/bin/sh" >connect.sh
   echo "ssh -F cfg remote " >>connect.sh
+  echo "ssh -F cfg remote " >>connect.ps1
   chmod +x connect.sh
 
 done
