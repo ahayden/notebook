@@ -20,7 +20,7 @@ chown $usr. /home/$usr/.ssh/authorized_keys
 apt-get update && apt-get install -y docker.io
 usermod -aG docker $usr
 systemctl enable docker && service docker start
-su -c "docker run -e DISABLE_AUTH=true -d -p 127.0.0.1:8787:8787 rocker/tidyverse:3.6.1" $usr
+su -c "docker run -e DISABLE_AUTH=true -d -p 127.0.0.1:8787:8787 kelshmo/sc-covarr" $usr
 EOF
 
   scp -i ~/.ssh/jumpcloud -oStrictHostKeyChecking=accept-new key.pub mk.sh $i:/tmp/
