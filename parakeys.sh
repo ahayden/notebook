@@ -32,17 +32,17 @@ Host remote
   User $usr
   IdentityFile ./key
   LocalForward 8787 localhost:8787
+  StrictHostKeyChecking accept-new
 EOF
 
   echo "[InternetShortcut]" >rstudio.url
   echo "URL=http://localhost:8787/" >>rstudio.url
   echo "#!/bin/sh" >connect.sh
-  echo "ssh -F cfg remote " >>connect.sh
-  echo "ssh -F cfg remote " >>connect.ps1
-  chmod +x connect.sh
+  echo "chmod 0400 key; ssh -F cfg remote " >>connect.sh
+  chmod +x connect.sh 
 
 done
 #distribute privkey, assigned IP, and ssh string 
 # can do ./connect.sh and open rstudio.url
-cd /tmp && tar cz -f connections.tgz hack
-#cp usb
+cd /tmp && tar c -f connections.tar hack
+#cp usb ; tar -xf connections.tar '*ip*'
