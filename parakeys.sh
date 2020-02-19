@@ -17,7 +17,6 @@ mkdir -p /home/$usr/.ssh
 mv /tmp/key.pub /home/$usr/.ssh/authorized_keys
 chmod 0644 /home/$usr/.ssh/authorized_keys
 chown $usr. /home/$usr/.ssh/authorized_keys
-su -c "git clone -C /home/$usr/ https://github.com/pathpathpath" $usr
 apt-get update && apt-get install -y docker.io
 usermod -aG docker $usr
 systemctl enable docker && service docker start
