@@ -17,6 +17,7 @@ mkdir -p /home/$usr/.ssh
 mv /tmp/key.pub /home/$usr/.ssh/authorized_keys
 chmod 0644 /home/$usr/.ssh/authorized_keys
 chown $usr. /home/$usr/.ssh/authorized_keys
+su -c "git clone -C /home/$usr/ https://github.com/pathpathpath" $usr
 apt-get update && apt-get install -y docker.io
 usermod -aG docker $usr
 systemctl enable docker && service docker start
@@ -45,4 +46,10 @@ done
 #distribute privkey, assigned IP, and ssh string 
 # can do ./connect.sh and open rstudio.url
 cd /tmp && tar c -f connections.tar hack
-#cp usb ; tar -xf connections.tar '*ip*'
+#cp connections.tar /usb ; tar -xf connections.tar '*ip*'
+
+
+#(1) Open rstudio shell
+#(2) Fork git repo https://github.com/Sage-Bionetworks/UW-single-cell-hackathon.git
+#(3) git clone from personal fork
+#(4) pull from personal fork, commit local changes, push to personal fork
