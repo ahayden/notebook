@@ -38,15 +38,16 @@ EOF
   echo "[InternetShortcut]" >rstudio.url
   echo "URL=http://localhost:8787/" >>rstudio.url
   echo "#!/bin/sh" >connect.sh
-  echo "chmod 0400 key; ssh -F cfg remote " >>connect.sh
+  echo "ssh -F cfg remote " >>connect.sh
   chmod +x connect.sh 
 
 done
 #distribute privkey, assigned IP, and ssh string 
 # can do ./connect.sh and open rstudio.url
 cd /tmp && tar c -f connections.tar hack
-#cp connections.tar /usb ; tar -xf connections.tar '*ip*'
-
+#cp connections.tar /Volumes/usbstick ; cd /Volumes/usbstick ; tar xvf connections.tar
+# On MacOS/Linux: tar -xf connections.tar '*ip*'
+# On Win10: copy ip to folder
 
 #(1) Open rstudio shell
 #(2) Fork git repo https://github.com/Sage-Bionetworks/UW-single-cell-hackathon.git
