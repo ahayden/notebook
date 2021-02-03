@@ -1,4 +1,4 @@
-# USENIX Enigma 2020
+# USENIX Enigma 2021
 
 ### [Is Cyber War Legal: A Four Hundred Year Retrospective](https://www.usenix.org/conference/enigma2021/presentation/shapiro)
 - Before 1928, war between states was a legal method of settling debts. Economic sanction by a neutral state was illegal.
