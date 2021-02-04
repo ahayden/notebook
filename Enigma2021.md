@@ -110,6 +110,7 @@
 - [Seaglass Project](https://seaglass.cs.washington.edu)
 - [5G vulns](https://www.youtube.com/watch?v=Nk4ghKTvwfg)
 - [Breaking LTE on Layer Two](https://ieeexplore.ieee.org/document/8835335)
+- [X.509 PKI?](https://dl.acm.org/doi/10.1145/3317549.3323402)
 - New work: [Crocodile Hunter Project](https://github.com/EFForg/crocodilehunter)
 
 ### [Designing Verifiable Health Solutions For Global Pandemic](https://www.usenix.org/conference/enigma2021/presentation/funk)
