@@ -1,0 +1,6 @@
+unzip book.epub
+mkdir new
+for file in * ; do convert $file -strip -quality 50 new/$file; done
+mv new/* .
+cd ..
+zip -r book_title.epub book_title/
