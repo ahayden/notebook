@@ -9,6 +9,7 @@ DNS=2a07:a8c1::#host-key.dns2.nextdns.io
 DNSOverTLS=yes
 ```
 2. Install resolvconf: `apt-get install resolvconf`
-3. Make resolvconf not dynamically update `/etc/resolv.conf`: `dpkg-reconfigure resolvconf`
-3. Remove default `resolv.conf`: `rm /etc/resolv.conf`
-4. Add resolv.conf link to resolved: `ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
+3. Enable service: `systemctl enable systemd-resolved.service`
+4. Make resolvconf not dynamically update `/etc/resolv.conf`: `dpkg-reconfigure resolvconf`
+5. Remove default `resolv.conf`: `rm /etc/resolv.conf`
+6. Add resolv.conf link to resolved: `ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
